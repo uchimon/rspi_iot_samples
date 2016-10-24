@@ -1,0 +1,14 @@
+#awsiotの設定
+[awsiot]
+endpoint = endpoint 
+client = client_id
+port = port
+
+#snapshot.pyの設定 
+[snapshot]
+sv_dir = dir
+
+[main]
+#s3へのアップロード情報
+s3bucket = bucketname
+s3domain = s3domain

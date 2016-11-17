@@ -22,8 +22,8 @@ var device = awsIot.device({
 //温度湿度のセンサー入力Pin
 DHT_pin=4
 //AWSIoTへの転送間隔(ミリ秒)
-wait_time=3600000 //1hour
-//wait_time=10000 //10sec 
+//wait_time=3600000 //1hour
+wait_time=100000 //10sec 
 //取得場所
 place = 'my-house';
 //デバイスID
@@ -47,8 +47,8 @@ device.on('connect', function() {
               "deviceid": deviceid,
               "place": place,
               "timestamp": datas[0],
-              "humid": datas[1],
-              "temp": datas[2]
+              "温度": datas[1],
+              "湿度": datas[2]
           };
 
           // Serialize record to JSON format and publish a message
